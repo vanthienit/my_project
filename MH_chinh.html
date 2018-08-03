@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Cửa hàng điện tử</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/dinh_dang.css">
+
+</head>
+<style>
+  #iframe1 {
+    width: 100%;
+
+  }
+
+  #iframe2 {
+    width: 100%;
+    height: 1500vh;
+  }
+</style>
+
+<body>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+    crossorigin="anonymous"></script>
+  <script src="../xu_ly/xl_3l.js"></script>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-11">
+        <div class="container-fluid" id="th_ch">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-md navbar-light bg-primary">
+      <!-- <a class="navbar-brand" href="#">CH Điện tử</a>
+        <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button> -->
+      <div class="collapse navbar-collapse d-none d-sm-block" id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link  text-white d-none d-sm-block" href="javascript:void(0)" id="Th_Trang_chu">Trang chủ
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  text-white d-none d-sm-block" href="javascript:void(0)" id="Th_Tivi">Tivi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  text-white d-none d-sm-block" href="javascript:void(0)" id="Th_Dien_thoai">Điện Thoại</a>
+          </li>
+          <li class="nav-item dropdown d-none d-md-block">
+            <a class="nav-link dropdown-toggle  text-white" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hỗ trợ</a>
+            <div class="dropdown-menu" style="border: none" aria-labelledby="dropdownId">
+              <a class="dropdown-item" style="border-bottom: 1px solid red" href="#">Gửi mail hỗ trợ</a>
+              <a class="dropdown-item" style="border-bottom: 1px solid red" href="#">Đến cửa hàng</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline d-none d-md-block" align="center">
+          <input class="form-control mr-sm-2" type="text" placeholder="Tìm kím...">
+          <button class="btn btn-danger my-2 my-sm-0" type="submit">Tìm Kiếm</button>
+        </form>
+        <div class="ml-5 d-none d-md-block">
+          <button class="btn btn-sm btn-success">
+            <a href="">
+              <i class="fa fa-sign-in-alt mauIcon"></i>
+            </a> Đăng Nhập</button>
+          <!-- <button class="btn btn-sm btn-success"><a href=""><i class="fa fa-sign-out-alt mauIcon "></i></a> Đăng Xuất</button> -->
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="container mt-2 text-danger" id="th_thong_bao"></div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-9">
+        <div class="row" id="iframe1"></div>
+        <div class="container-fluid" id="th_pt"></div>
+        <!-- <iframe id="iframe1" class="container-fluid" src="MH_tivi.html" frameborder="0"></iframe> -->
+      </div>
+      <div class="col-md-3">
+        <div>
+          <select class="form-control mt-2">
+            <option value="" class="d-none">Lọc sản phẩm</option>
+            <option value="1">Lọc giá tăng</option>
+            <option value="2">Lọc giá giảm</option>
+            <option value="3">Lọc theo tên</option>
+          </select>
+        </div>
+        <div class="pt-4">
+          <input type="button" class="btn btn-outline-danger" id="th_ban_chay" value="Sản Phẩm bán chạy nhất"></input>
+          <hr>
+          <div class="card-deck">
+            <img class="card-img-top" id="img_ban_chay" src="" alt=""></img>
+            <div class="card-body" id="text_ban_chay">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--
+  <iframe id="iframe2" class="d-none" src="MH_dien_thoai.html" frameborder="0"></iframe>
+  -->
+  <div class="container-fluid">
+    <div class="fixed-bottom mr-2" align="right">
+      <button class="btn btn-sm btn-danger" data-toggle="collapse" aria-controls="collapseExample" aria-expanded="false" href="#collapseExample">Hỗ trợ trự tuyến</button>
+
+      <div class="row">
+        <div class="col-4 offset-8">
+          <div class="collapse" id="collapseExample">
+            <div class="form">
+              <div class="form-control">
+                <div class="my-2">
+                  <input placeholder="Email..." type="mail" id="dc_mail" />
+                </div>
+                <div class="my-2">
+                  <input placeholder="Nội dung..." type="text" id="nd_ht" />
+                </div>
+                <div class="d-inline">
+                  <button class="btn btn-sm btn-danger">Hủy</button>
+                  <button class="btn btn-sm btn-primary mx-2">Gửi</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <!-- Button trigger modal -->
+    <button type="button" id="th_show" class="btn btn-primary btn-lg d-none" data-toggle="modal" data-target="#modelId">
+      Launch
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="modelTitleId">
+              <span id="th_ten"></span>
+            </h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+
+          </div>
+          <div class="modal-body">
+            <div class="row">
+                <div class="col-md-6" id="th_chi_tiet"></div>
+                <div class="col-md-4 col-md-offset-2">
+                    <div id="th_gia"></div>
+                    <div id="th_tinh_nang"></div>
+                  </div>
+            </div>
+          </div>
+          
+          <!-- <div class="modal-footer">
+           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+           <button type="button" class="btn btn-primary">Save</button>
+         </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var th_ch = document.getElementById('th_ch')
+    var iframe1 = document.getElementById('iframe1')
+    var limit = 6
+    var limittv = 8
+    var du_lieu = {}
+    var tmp1 = doc_ds_tivi()
+    var tmp2 = doc_danh_sach_dt()
+    tmp1.then(x => {
+      var cua_hang = x.cua_hang_tv[0]
+      //console.log(cua_hang)
+      du_lieu.tivi = x
+      //console.log(du_lieu.tivi.ds_tivi)
+      tao_th_ch(cua_hang, th_ch)
+    })
+    tmp2.then(x => {
+      du_lieu.dien_thoai = x
+      //console.log(du_lieu.dien_thoai.ds_dien_thoai)
+    })
+    Th_Tivi.onclick = () => {
+      var ds_tivi = du_lieu.tivi.ds_tivi
+      //console.log(ds_tivi)
+      if (ds_tivi.length > 0) {
+        xuat_ds_pt(ds_tivi, th_thong_bao, 0, limittv)
+        // console.log(ds_tivi)
+        if (ds_tivi.length > parseInt(limittv)) {
+          tao_th_phan_trang(ds_tivi, limittv, th_pt)
+        }
+      }
+    }
+    Th_Dien_thoai.onclick = () => {
+      // iframe1.src = "MH_dien_thoai.html"
+      var ds_dien_thoai = du_lieu.dien_thoai.ds_dien_thoai
+      // console.log(ds_dien_thoai)
+      if (ds_dien_thoai.length > 0) {
+        xuat_ds_pt_dt(ds_dien_thoai, th_thong_bao, 0, limit)
+        //  console.log(ds_dien_thoai)
+        if (ds_dien_thoai.length > parseInt(limit)) {
+          tao_th_phan_trang_dt(ds_dien_thoai, limit, th_pt)
+        }
+      }
+    }
+  </script>
+  <script>
+    function xuat_ds_pt(ds_pt, th_thong_bao, vt, limittv) {
+      iframe1.innerHTML = ""
+      var dem = 0
+      ds_pt.forEach((x, index) => {
+        var the_hien = tao_the_hien_tivi(x, iframe1)
+        if (index >= vt && dem < limittv) {
+          the_hien.childNodes[0].onclick = () => {
+            var sp = the_hien.childNodes[0].parentNode.getAttribute("data")
+            sessionStorage.setItem("gio_hang", sp)
+            window.location = "MH_gio_hang.html"
+          }
+          // the_hien.childNodes[1].onclick = () => {
+          //   var sp_chon = JSON.parse(the_hien.childNodes[1].parentNode.getAttribute("data"))
+          //   var noi_dung_html = `<h4 class="text-primary">${sp_chon.Ten}</h4>
+          //       <img src="https://server-media.herokuapp.com/${sp_chon.Ma_so}.png" />
+          //       `
+          //   th_chi_tiet.innerHTML = noi_dung_html
+          //   th_show.click()
+          // }
+          dem++
+        } else {
+          the_hien.style.cssText = "display:none"
+        }
+      });
+      document.getElementById('img_ban_chay').src = "https://server-media.herokuapp.com/TIVI_17.png"
+      document.getElementById('th_ban_chay').value = "Tivi bán chạy nhất"
+      th_thong_bao.innerHTML = `<h3>Danh sách sản phẩm (${ds_pt.length})</h3>`
+    }
+    function xuat_ds_pt_dt(ds_pt, th_thong_bao, vt, limit) {
+      iframe1.innerHTML = ""
+      var dem = 0
+      ds_pt.forEach((x, index) => {
+        var the_hien = tao_the_hien_dt(x, iframe1)
+        if (index >= vt && dem < limit) {
+          // the_hien.childNodes[0].onclick = () => {
+          //   var sp = the_hien.childNodes[0].parentNode.getAttribute("data")
+          //   sessionStorage.setItem("gio_hang", sp)
+          //   window.location = "MH_gio_hang.html"
+          // }
+          the_hien.childNodes[0].onclick = () => {
+            var sp_chon = JSON.parse(the_hien.childNodes[0].parentNode.getAttribute("data"))
+            var noi_dung_html = `
+                <img src="https://server-media.herokuapp.com/${sp_chon.Ma_so}.png" />
+                `
+            var nd_ten = `<h4 class="text-primary">${sp_chon.Ten}</h4>`
+            var nd_gia = `<h6 class="text-danger"><span style="color:black">Giá</span>: ${sp_chon.Don_gia_Ban}</h6>`
+            var nd_tinh_nang = `<small>-Hệ điều hành: ISO<br>-Chip: SnapDragon 825<br>
+              -Ram: 4Gb<br>-Bộ nhớ trong: 64Gb</small>`
+            th_tinh_nang.innerHTML=nd_tinh_nang
+            th_gia.innerHTML=nd_gia
+            th_ten.innerHTML = nd_ten
+            th_chi_tiet.innerHTML = noi_dung_html
+            th_show.click()
+          }
+          dem++
+        } else {
+          the_hien.style.cssText = "display:none"
+        }
+      });
+      document.getElementById('img_ban_chay').src = "https://server-media.herokuapp.com/IPHONE_9.png"
+      document.getElementById('th_ban_chay').value = "Điện thoại bán chạy nhất"
+      th_thong_bao.innerHTML = `<h3>Danh sách sản phẩm (${ds_pt.length})</h3>`
+    }
+  </script>
+</body>
+
+</html>
